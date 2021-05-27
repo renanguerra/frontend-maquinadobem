@@ -1,0 +1,92 @@
+[
+  {
+    "type": "doação de materiais",
+    "title": "Arrecadação de alimentos para moradores de rua",
+    "stateName": "RN",
+    "cityName": "Natal",
+    "hours": "",
+    "value": "",
+    "logo": "./icon1.svg",
+    "items": "36"
+  },
+  {
+    "type": "doação de materiais",
+    "title": "Arrecadação de alimentos para moradores de rua",
+    "stateName": "RN",
+    "cityName": "Natal",
+    "hours": "",
+    "value": "",
+    "logo": "./icon1.svg",
+    "items": "42"
+  },
+  {
+    "type": "vaga de voluntariado",
+    "title": "Entrega de roupas e alimentos para moradores de rua",
+    "stateName": "RN",
+    "cityName": "Natal",
+    "hours": "2-6",
+    "value": "",
+    "logo": "./icon.svg",
+    "items": ""
+  },
+  {
+    "type": "vaga de voluntariado",
+    "title": "Entrega de roupas e alimentos para moradores de rua",
+    "stateName": "CE",
+    "cityName": "Fortaleza",
+    "hours": "2-4",
+    "value": "",
+    "logo": "./icon.svg",
+    "items": ""
+  },
+  {
+    "type": "vaga de voluntariado",
+    "title": "Entrega de roupas e alimentos para moradores de rua",
+    "stateName": "CE",
+    "cityName": "Fortaleza",
+    "hours": "2-6",
+    "value": "",
+    "logo": "./icon.svg",
+    "items": ""
+  },
+  {
+    "type": "Campanha de arrecadação",
+    "title": "Arrecadação de alimentos para moradores de rua",
+    "stateName": "SP",
+    "cityName": "São Paulo",
+    "hours": "",
+    "value": "5000",
+    "logo": "./icon2.svg",
+    "items": ""
+  },
+  {
+    "type": "Campanha de arrecadação",
+    "title": "Arrecadação de alimentos para moradores de rua",
+    "stateName": "CE",
+    "cityName": "Fortaleza",
+    "hours": "",
+    "value": "5000",
+    "logo": "./icon2.svg",
+    "items": ""
+  },
+  {
+    "type": "Doação de materiais",
+    "title": "Entrega de roupas e alimentos para moradores de rua",
+    "stateName": "SP",
+    "cityName": "São Paulo",
+    "hours": "",
+    "value": "",
+    "logo": "./icon1.svg",
+    "items": "42"
+  },
+  {
+    "type": "Campanha de arrecadação",
+    "title": "Arrecadação de alimentos para moradores de rua",
+    "stateName": "SP",
+    "cityName": "São Paulo",
+    "hours": "",
+    "value": "5000",
+    "logo": "./icon2.svg",
+    "items": ""
+  }
+]
