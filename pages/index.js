@@ -86,7 +86,8 @@ export default function Home() {
 
     axios.get('https://api.hom.transform.click/search/opportunities?filter_materials=true&filter_subscribes=true',{
       headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Origin': 'brasil.hom.transform.click'
       }}).then((res)=>{
 
         res.data.response.opportunities_data.map((e)=>{
