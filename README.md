@@ -6,9 +6,6 @@
 
 Para rodar o projeto basta clonar e executar o comando "npm run dev" no terminal.
 
-O projeto também está hospedado na vercel, para acessar basta clicar no link abaixo.
-
-[Live Demo](https://frontend-maquinadobem.vercel.app/)
 
 ## 🚀 Tecnologias
 
