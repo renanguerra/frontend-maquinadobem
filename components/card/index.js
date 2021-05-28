@@ -128,11 +128,11 @@ function maskValue(value){
     return value;
 }
 
-export default function Card({type,title,icon,city,state,hour,value,items}){
+export default function Card({type,title,icon,address,actionName,positionAvaliable}){
     return(
         <CardMain>
             <CardHeader>
-                <span>{type.toUpperCase()}</span>
+                <span>{type}</span>
             </CardHeader>
 
             <CardBody>
@@ -144,32 +144,16 @@ export default function Card({type,title,icon,city,state,hour,value,items}){
                     <img src={icon}/>
                 </CardBodyHeader>
                 
-                <Subtitle>SP Invisível</Subtitle>
+                <Subtitle>{actionName}</Subtitle>
 
                 <CardBodyFooter>
                     <div>
-                        <Title>{hour || maskValue(value) || items}</Title>
+                        <Title>{positionAvaliable}</Title>
 
-                        {hour && (
-                            <div>
-                                <span>HORAS</span>
-                                <span>SEMANA</span>
-                            </div>
-                        )}
-                        
-                        {value && (
-                            <div>
-                                <span>VALOR</span>
-                                <span>ESPERADO</span>
-                            </div>
-                        )}
-
-                        {items && (
-                            <div>
-                                <span>ÍTENS</span>
-                                <span>DISPONÍVEIS</span>
-                            </div>
-                        )}
+                        <div>
+                            <span>VAGAS</span>
+                            <span>DISPONÍVEIS</span>
+                        </div>
                     </div>
 
                     <Button>Participar</Button>
@@ -178,7 +162,7 @@ export default function Card({type,title,icon,city,state,hour,value,items}){
             </CardBody>
 
             <CardFooter>
-                <span>{city + ', ' + state}</span>
+                <span>{address}</span>
             </CardFooter>
         </CardMain>
     )

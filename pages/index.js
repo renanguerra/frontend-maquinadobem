@@ -6,6 +6,7 @@ import Toggle from 'react-toggle'
 import "react-toggle/style.css"
 import { useEffect, useState } from 'react'
 import Json from './api/api.json'
+import axios from 'axios'
 
 const Main = styled.div`
   width: 80%;
@@ -75,11 +76,46 @@ const ButtonFooter = styled.button`
 
 export default function Home() {
   const [toggleValue,setToogle] = useState(false)
-  const [data, setData] = useState()
+
+  const [cardInfos, setCardInfos] = useState([])
+
+
 
   useEffect(()=>{
-    setData(Json)
-  },[data])
+    let copyCardInfos = []
+
+    axios.get('https://api.hom.transform.click/search/opportunities?filter_materials=true&filter_subscribes=true',{
+      headers: {
+          'Content-Type': 'application/json'
+      }}).then((res)=>{
+
+        res.data.response.opportunities_data.map((e)=>{
+
+          if(e.level === 'subscribe'){
+            copyCardInfos.push({
+              title:'Vaga de voluntariado',
+              nameSubscribe: e.subscribe_data.title,
+              nameAction: e.action_data.title,
+              positionAvaliable: e.subscribe_data.position.available,
+              address: e.subscribe_data.time_accept_remote ? 'Remoto' : `${e.subscribe_data.address.city}, ${e.subscribe_data.address.state}`,
+              icon:'./icon.svg'
+            })
+          } else if(e.level === 'materials') {
+            copyCardInfos.push({
+              title:'Doação de material',
+              nameSubscribe: e.material_data.title,
+              nameAction: e.action_data.title,
+              positionAvaliable: e.material_data.position.available,
+              address: e.material_data.time_accept_remote ? 'Remoto' : `${e.material_data.address.city}, ${e.material_data.address.state}`,
+              icon:'./icon1.svg'
+            })
+          }
+        })
+        
+        setCardInfos(copyCardInfos)
+      })
+    
+  },[cardInfos])
 
   return (
     <div>
@@ -100,9 +136,9 @@ export default function Home() {
     </Header>
 
     <Main>
-      {data && (
-        data.map((e)=>(
-        <Card key={e.id} type={e.type} title={e.title} icon={e.logo} city={e.cityName} state={e.stateName} hour={e.hours} items={e.items} value={e.value}/>
+      {cardInfos && (
+        cardInfos.map((e)=>(
+        <Card key={e.id} type={e.title} title={e.nameSubscribe} icon={e.icon} address={e.address} actionName={e.nameAction} positionAvaliable={e.positionAvaliable}/>
       )))}
 
     </Main>
